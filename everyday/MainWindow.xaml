@@ -5,18 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:everyday"
         mc:Ignorable="d"
-        Title="Diary" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
+        Title="Diary" Height="450" Width="800" Loaded="Window_Loaded"
+        Background="#183A37"
+        MinWidth="600"
+        MinHeight="400"
+        WindowStartupLocation="CenterScreen">
+   
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="103*"/>
             <ColumnDefinition Width="193*"/>
             <ColumnDefinition Width="504*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dgTodoList" AutoGenerateColumns="False" FontSize="16" Margin="10,10,10,10" FontWeight="Bold" Grid.ColumnSpan="3">
+        <DataGrid Background="LightGray" x:Name="dgTodoList" AutoGenerateColumns="False" FontSize="16" Margin="10,10,10,10" FontWeight="Bold" Grid.ColumnSpan="3">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path = CreationDate}" IsReadOnly="True" Header="CreationDate" Width="200"></DataGridTextColumn>
                 <DataGridCheckBoxColumn  Binding="{Binding Path = IsDone, UpdateSourceTrigger = PropertyChanged}" IsReadOnly="False" Header="Done" Width="60"></DataGridCheckBoxColumn>
-                <DataGridTextColumn Binding="{Binding Path = Text}" IsReadOnly="False" Header="Todo" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding Path = Text}" IsReadOnly="False" Header="Todo" Width="*" ></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
