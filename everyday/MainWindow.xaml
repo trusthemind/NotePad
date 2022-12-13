@@ -10,8 +10,7 @@
         MinWidth="600"
         MinHeight="400"
         WindowStartupLocation="CenterScreen">
-   
-    <Grid >
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="103*"/>
             <ColumnDefinition Width="193*"/>
@@ -21,7 +20,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path = CreationDate}" IsReadOnly="True" Header="CreationDate" Width="200"></DataGridTextColumn>
                 <DataGridCheckBoxColumn  Binding="{Binding Path = IsDone, UpdateSourceTrigger = PropertyChanged}" IsReadOnly="False" Header="Done" Width="60"></DataGridCheckBoxColumn>
-                <DataGridTextColumn  Binding="{Binding Path = Text}" IsReadOnly="False" Header="Todo" Width="*" ></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Path = Text}" IsReadOnly="False" Header="Todo" Width="*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
